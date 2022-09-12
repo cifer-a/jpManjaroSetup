@@ -11,7 +11,7 @@ The japanese keyboard settings only work well with the KDE desktop manager (how 
 
 2.1 Figure out how to boot from USB on the device you use
 2.2 Insert the USB drive and boot from it
-## Try the "proprietary drivers" version if default does not work
+// Try the "proprietary drivers" version if default does not work
 2.4 before initiating the installation, make sure that you can connect to the wifi
 2.5 if you cannot connect to the wifi, you may want to try the full image if you selected the minimal image
 2.6 if the wifi does not work with the full image, you will want to research how to get it to work, and perhaps succeed in the live version 
@@ -19,18 +19,18 @@ The japanese keyboard settings only work well with the KDE desktop manager (how 
 
 3. Install linux on the device
 
-4. Set the locale to ja_JP
+## Setting up the keyboard
 
-5. Install packages fcitx5 fcitx5-im fcitx5-mozc
+4. Install packages fcitx5 fcitx5-im fcitx5-mozc
 
-6. enter "fcitx5-configtool"
+5. enter "fcitx5-configtool"
 
-7. add japanese (latin letters) and mozc to the group
+6. add japanese (latin letters) and mozc to the group
 
 Avoid adding more than one group, as the Japanese letters only will work in the system applications then.
 I.e., in order to get hiragana/romaji functionality to work in the browser and office editors, only one group can be used.
 
-8. set up config: 
+7. set up config: 
 > nano ~/.pam_environment
 
 In the editor, add the following:
@@ -39,7 +39,8 @@ QT_IM_MODULE=fcitx
 XMODIFIERS=@im=fcitx
 
 then exit and save: press ctrl+x (exit the nano editor) and "y" to save
-maybe it is enough to log out and back in, if not try to reboot.
 
-## check here for more, or search for fcitx5 + japanese on the web 
+8. Maybe it will suffice to log out and back in, if not try to reboot.
+
+// check here for more, or search for fcitx5 + japanese on the web 
 https://wiki.archlinux.org/title/Fcitx5
